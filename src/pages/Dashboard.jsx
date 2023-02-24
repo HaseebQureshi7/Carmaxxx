@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logoText from '/public/static/images/logo-text.png'
 import flagImage from '/public/static/images/flag.png'
 import hamMenu from '/public/static/images/ham-menu.png'
@@ -20,6 +20,12 @@ import star from '/public/static/images/star.png'
 export default function Dashboard() {
 
     const [isDisabled, setIsDisabled] = useState('disabled')
+
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelector('.animator-container').style.display = 'none'
+        }, 3000);
+    })
 
     return (
         <>
