@@ -16,13 +16,37 @@ import person1 from '/public/static/images/people/Ellipse 6.png'
 import person2 from '/public/static/images/people/Ellipse 6-1.png'
 import person3 from '/public/static/images/people/Ellipse 6-5.png'
 import star from '/public/static/images/star.png'
+import { motion } from 'framer-motion'
 
 export default function Dashboard() {
 
     const [isDisabled, setIsDisabled] = useState('disabled')
 
+    const FadeUp = {
+        hidden: {
+            // y: 50,
+            opacity: 0
+        },
+        animate: {
+            // y: 0,
+            opacity: 1,
+            transition: {
+                duration: 1,
+                ease: 'easeInOut',
+                staggerChildren: 0.1,
+                delayChildren: 2
+            }
+        }
+    };
+
+    const stagger = {
+        hidden: { y: 50, opacity: 0 },
+        animate: { y: 0, opacity: 1 }
+    };
+
     useEffect(() => {
         setTimeout(() => {
+            AOS.init();
             document.querySelector('.animator-container').style.display = 'none'
         }, 3000);
     })
@@ -90,8 +114,16 @@ export default function Dashboard() {
                 {/* HERO SECTION */}
                 <section className='hero-container'>
                     <div className="hero-header">
-                        <h1>Find cars your budget will love.</h1>
+                        <motion.h1 variants={FadeUp} initial="hidden" animate="animate">
+                            <motion.span variants={stagger}>Find </motion.span>
+                            <motion.span variants={stagger}>cars </motion.span>
+                            <motion.span variants={stagger}>your </motion.span>
+                            <motion.span variants={stagger}>budget </motion.span>
+                            <motion.span variants={stagger}>will </motion.span>
+                            <motion.span variants={stagger}>love.</motion.span>
+                        </motion.h1>
                     </div>
+
                     <div className="hero-options">
                         <div className="hero-left-option">
                             <input type="text" placeholder='Make, Model or Brand' />
@@ -99,13 +131,13 @@ export default function Dashboard() {
                             <h6>Take 30 days to love it or return it</h6>
                             <h6>(up to 1500 mi).</h6>
                         </div>
-                        <div className="hero-right-option">
+                        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3, ease: [0.4, 0, 0.2, 1] }} className="hero-right-option">
                             <div className="sub-hero-right-option">
                                 <h3>Want to talk to a professional ?</h3>
                                 <a href='tel:18779083218'>Call Now</a>
                                 {/* <p>It's free ; {")"}</p> */}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
 
@@ -116,43 +148,43 @@ export default function Dashboard() {
                         <h6>All listings are fetched in real time and all cars are in stock.</h6>
                     </div>
 
-                    <div className="car-tabs-container">
-                        <div className="car-tab-details">
+                    <div data-aos="fade-up" suppressHydrationWarning className="car-tabs-container">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={hilux} />
                             <h6>Toyota Hilux (2017)</h6>
                         </div>
-                        <div className="car-tab-details">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={i30} />
                             <h6>Hyundai i30 (2018)</h6>
                         </div>
-                        <div className="car-tab-details">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={ranger} />
                             <h6>Ford Ranger (2020)</h6>
                         </div>
-                        <div className="car-tab-details">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={corolla} />
                             <h6>Toyota Corolla (2022)</h6>
                         </div>
-                        <div className="car-tab-details">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={triton} />
                             <h6>Mitsubishi Triton (2021)</h6>
                         </div>
-                        <div className="car-tab-details">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={cx5} />
                             <h6>Mazda CX-5 (2017)</h6>
                         </div>
-                        <div className="car-tab-details">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={rav4} />
                             <h6>Toyota RAV4 (2019)</h6>
                         </div>
-                        <div className="car-tab-details">
+                        <div data-aos="fade-up" suppressHydrationWarning className="car-tab-details">
                             <div className='box-design' />
                             <Image loading="lazy" as="image" width='250' height="250" alt='car-listing' src={camry} />
                             <h6>Toyota Camry (2022)</h6>
@@ -168,9 +200,9 @@ export default function Dashboard() {
                     </div>
 
                     <div className="testimonial-container">
-                        <div className="testimonial-tab">
+                        <div data-aos="zoom-in" className="testimonial-tab">
                             <h6>~ Buying from carmaxxx was the best decision i made, top class quality</h6>
-                            <Image loading="lazy" as="image" className='personImg' width={100} height={100} alt="testimonial-tab" src={person1} />
+                            <Image loading="lazy" as="image" className='personImg' width={75} height={75} alt="testimonial-tab" src={person1} />
                             <div className="stars-count">
                                 <Image loading="lazy" as="image" width={25} height={25} alt="testimonial-tab" src={star} />
                                 <Image loading="lazy" as="image" width={25} height={25} alt="testimonial-tab" src={star} />
@@ -180,9 +212,9 @@ export default function Dashboard() {
                             </div>
                             <h1>Arjun Sethi</h1>
                         </div>
-                        <div className="testimonial-tab">
+                        <div data-aos="zoom-in" className="testimonial-tab">
                             <h6>~ Car is still running like the day i bought it from Carmaxxx ; {')'}</h6>
-                            <Image loading="lazy" as="image" className='personImg' width={100} height={100} alt="testimonial-tab" src={person2} />
+                            <Image loading="lazy" as="image" className='personImg' width={75} height={75} alt="testimonial-tab" src={person2} />
                             <div className="stars-count">
                                 <Image loading="lazy" as="image" width={25} height={25} alt="testimonial-tab" src={star} />
                                 <Image loading="lazy" as="image" width={25} height={25} alt="testimonial-tab" src={star} />
@@ -192,9 +224,9 @@ export default function Dashboard() {
                             </div>
                             <h1>Laury Randolf</h1>
                         </div>
-                        <div className="testimonial-tab">
+                        <div data-aos="zoom-in" className="testimonial-tab">
                             <h6>~ 140,000 miles and counting! Amazing deal i got from Carmaxxx.</h6>
-                            <Image loading="lazy" as="image" className='personImg' width={100} height={100} alt="testimonial-tab" src={person3} />
+                            <Image loading="lazy" as="image" className='personImg' width={75} height={75} alt="testimonial-tab" src={person3} />
                             <div className="stars-count">
                                 <Image loading="lazy" as="image" width={25} height={25} alt="testimonial-tab" src={star} />
                                 <Image loading="lazy" as="image" width={25} height={25} alt="testimonial-tab" src={star} />
@@ -209,7 +241,7 @@ export default function Dashboard() {
                 </section>
 
                 {/* ADVERTISEMENT */}
-                <section className='advert-container'>
+                <section data-aos="fade-up" data-aos-anchor-placement="center-bottom" className='advert-container'>
                     <div className="advert-details">
                         <h1>Don’t know which car to buy ?</h1>
                         <h6>You are just one call away from getting your new car!</h6>
