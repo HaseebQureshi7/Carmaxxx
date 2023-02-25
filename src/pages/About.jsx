@@ -141,7 +141,7 @@ export default function About() {
               <motion.span variants={stagger}>you </motion.span>
               <motion.span variants={stagger}>want.</motion.span>
             </motion.h1>
-            <p>With 50,000 CarMax Quality Certified cars to choose from,&#8209;there's a perfect match for your budget and life. Millions of cars are ruled out by our vetting process, and we never sell cars with flood damage, frame damage, or salvage history. Anything that&#8209;doesn't meet our standards is repaired or replaced by our highly trained technicians.</p>
+            <p>With 50,000 CarMax Quality Certified cars to choose from,there&apos;s a perfect match for your budget and life. Millions of cars are ruled out by our vetting process, and we never sell cars with flood damage, frame damage, or salvage history. Anything that doesn&apos;t meet our standards is repaired or replaced by our highly trained technicians.</p>
           </div>
         </section>
 
