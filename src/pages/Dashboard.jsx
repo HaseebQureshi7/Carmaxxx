@@ -102,7 +102,7 @@ export default function Dashboard() {
                         <h2>{modalData}</h2>
                         <h6>Available</h6>
                         <h4>Contact the car seller on the number below to make a deal!</h4>
-                        <a href='tel:18779083218'>Call The Seller</a>
+                        <a href='tel:8338780241'>Call The Seller</a>
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@ export default function Dashboard() {
                         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 3, ease: [0.4, 0, 0.2, 1] }} className="hero-right-option">
                             <div className="sub-hero-right-option">
                                 <h3>Want to talk to a professional ?</h3>
-                                <a href='tel:18779083218'>Call Now</a>
+                                <a href='tel:8338780241'>Call Now</a>
                                 {/* <p>It's free ; {")"}</p> */}
                             </div>
                         </motion.div>
@@ -286,7 +286,7 @@ export default function Dashboard() {
                     <div className="advert-details">
                         <h1>Don’t know which car to buy ?</h1>
                         <h6>You are just one call away from getting your new car!</h6>
-                        <a href='tel:18779083218'>Talk to a Professional</a>
+                        <a href='tel:8338780241'>Talk to a Professional</a>
                     </div>
                 </section>
 
@@ -296,7 +296,7 @@ export default function Dashboard() {
                         <h1>CALL US WHENEVER YOU LIKE ; {')'} </h1>
                         <p>based in</p>
                         <h6>United States of America & Australia</h6>
-                        <a href='tel:18779083218'>CALL US - 770-493-332-22</a>
+                        <a href='tel:8338780241'>CALL US - 8338780241</a>
                     </div>
                     <div className="copywright">
                         <h5>Copyright © 2023 CarMaxxx Enterprise Services, LLC</h5>

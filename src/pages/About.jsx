@@ -151,7 +151,7 @@ export default function About() {
             <h1>HAVE ANY QUESTIONS ?</h1>
             <p>based in</p>
             <h6>United States of America & Australia</h6>
-            <a href='tel:18779083218'>CONTACT ON - 770-493-332-22</a>
+            <a href='tel:8338780241'>CONTACT ON - 8338780241</a>
           </div>
           <div className="copywright">
             <h5>Copyright © 2023 CarMaxxx Enterprise Services, LLC</h5>

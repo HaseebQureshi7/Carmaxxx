@@ -99,7 +99,7 @@ export default function Shop() {
                         <h2>{modalData}</h2>
                         <h6>Available</h6>
                         <h4>Contact the car seller on the number below to make a deal!</h4>
-                        <a href='tel:18779083218'>Call The Seller</a>
+                        <a href='tel:8338780241'>Call The Seller</a>
                     </div>
                 </div>
 
@@ -217,7 +217,7 @@ export default function Shop() {
                     <div className="advert-details">
                         <h1>Don’t know which car to buy ?</h1>
                         <h6>You are just one call away from getting your new car!</h6>
-                        <a href='tel:18779083218'>Talk to a Professional</a>
+                        <a href='tel:8338780241'>Talk to a Professional</a>
                     </div>
                 </section>
 
@@ -227,7 +227,7 @@ export default function Shop() {
                         <h1>WANT TO KNOW ABOUT OUR BEST DEALS ?</h1>
                         <p>based in</p>
                         <h6>United States of America & Australia</h6>
-                        <a href='tel:18779083218'>CALL US - 770-493-332-22</a>
+                        <a href='tel:8338780241'>CALL US - 8338780241</a>
                     </div>
                     <div className="copywright">
                         <h5>Copyright © 2023 CarMaxxx Enterprise Services, LLC</h5>
